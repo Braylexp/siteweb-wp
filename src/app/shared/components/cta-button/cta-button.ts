@@ -16,6 +16,7 @@ import { RouterModule } from '@angular/router';
     
     <a *ngIf="href && !routerLink"
        [href]="href"
+       target="_blank"
        [ngClass]="buttonClasses"
        class="inline-block text-center">
       {{ text }}

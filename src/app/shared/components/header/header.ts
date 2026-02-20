@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Router } from '@angular/router';
 import { NavItem } from '../../../core/models/content.model';
+import { CtaButton } from '../cta-button/cta-button';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule, CtaButton],
   templateUrl: './header.html',
   styleUrl: './header.css',
 })

@@ -6,33 +6,29 @@ import { SiteContent } from '../../core/models/content.model';
  */
 export const SITE_CONTENT: SiteContent = {
   general: {
-    name: 'CORPORACIÓN COLECTIVO DE ABOGADOS DEL OCCIDENTE COLOMBIANO (CAOC)',
+    name: 'RAMÍREZ & HERNÁNDEZ ABOGADOS Y ASOCIADOS S.A.S.',
     shortName: 'Ramírez y Hernández abogados',
-    tagline: 'Defendemos y promovemos los Derechos Humanos desde una perspectiva integral, impulsando la justicia social, la paz y la equidad en el suroccidente colombiano.',
-    nit: '901.905.259-3',
-    legalStatus: 'Entidad sin ánimo de lucro registrada ante la Cámara de Comercio del Cauca'
+    tagline: 'Trabajamos con seriedad, transparencia y vocación de servicio, porque creemos que la confianza se construye con resultados, claridad y un ejercicio profesional responsable del derecho.',
+    nit: '901.926.476',
+    legalStatus: 'Sociedad por Acciones Simplificada - S.A.S.'
   },
   
   contact: {
-    address: 'Carrera 2 N° 06-09, Barrio Loma de Cartagena',
+    address: 'CL 11 NORTE 11 - 64 SANTA CLARA',
     city: 'Popayán - Cauca',
-    email: 'caocolombiano@outlook.com',
+    email: 'ramirezhernandezabogadosa@outlook.com',
     phone: '323 406 9575'
   },
   
-  mission: 'Defender y promover los derechos humanos mediante acciones jurídicas, sociales y de acompañamiento interdisciplinario, garantizando la igualdad, la inclusión y la paz territorial.',
+  mission: `Brindar servicios jurídicos de alta calidad, fundamentados en el conocimiento técnico, la ética profesional y el compromiso con los intereses de nuestros clientes, ofreciendo asesoría y representación legal confiable, clara y oportuna.
+   Nos enfocamos en comprender a fondo cada situación jurídica, aportando soluciones responsables y estratégicas que generen confianza, seguridad jurídica y valor real para quienes depositan en nosotros la defensa de sus derechos.`,
   
-  vision: 'Ser una organización referente en el suroccidente colombiano en la promoción de los derechos humanos, la justicia social y la sostenibilidad, contribuyendo activamente a la construcción de paz y equidad.',
+  vision: 'Consolidarnos como un bufete de referencia en la región, reconocido por la seriedad, transparencia y efectividad de nuestros servicios legales, fortaleciendo relaciones de largo plazo con nuestros clientes '+
+        'A mediano y largo plazo, aspiramos a ampliar nuestra presencia y posicionamiento en el mercado legal colombiano, manteniendo siempre un ejercicio profesional ético, actualizado y alineado con las necesidades cambiantes de la sociedad y el entorno jurídico.',
   
-  objetoSocial: `Somos una entidad sin ánimo de lucro cuya finalidad es defender y promover los Derechos Humanos desde una perspectiva integral, fundamentándose en la indivisibilidad e interdependencia de todos los derechos y libertades.
+  objetoSocial: `Somos una entidad que tiene como objeto principal la prestación de servicios profesionales de asesoría, consultoría y representación judicial y extrajudicial a personas naturales y jurídicas, en las áreas del derecho penal, constitucional, civil y administrativo.
 
-Para cumplir con estos objetivos, la Corporación desarrolla actividades de fortalecimiento, asesoría y acompañamiento jurídico e interdisciplinario, además de participar en procesos de denuncia, interlocución e incidencia política, incluyendo litigios estratégicos a nivel nacional e internacional.
-
-Su propósito central es promover la resolución pacífica de conflictos, garantizar el acceso a la justicia en condiciones de igualdad, fomentar la inclusión social, la paz y la equidad, así como brindar apoyo psicológico y legal a víctimas de violaciones de derechos humanos, reconocidas o no, ayudándolas en su proceso de recuperación y reivindicación.
-
-La Corporación también busca impulsar la equidad social y la eliminación de la pobreza mediante programas de desarrollo económico y social, así como abogar por la sostenibilidad ambiental y el respeto por los derechos ecológicos, reconociendo su relación con los derechos humanos.
-
-Participa activamente en la formulación y revisión de políticas públicas con enfoque territorial, comprometiéndose con el goce pleno y efectivo de los derechos humanos para todas las personas, contribuyendo así a una sociedad más justa, equitativa y pacífica.`,
+La firma desarrolla todas las actividades necesarias para el cumplimiento de su labor profesional, incluyendo la celebración de contratos y la ejecución de actos jurídicos relacionados con la protección de los intereses de sus clientes y el adecuado ejercicio de sus derechos y obligaciones, dentro del marco legal vigente en Colombia.`,
   
   services: [
     {
