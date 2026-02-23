@@ -32,6 +32,7 @@ export interface SiteContent {
   objetoSocial: string;
   services: ServiceItem[];
   activities: string[];
+  news?: NewsItem[];
 }
 
 export interface ContactForm {
@@ -42,6 +43,19 @@ export interface ContactForm {
 }
 
 export interface NavItem {
-  path: string;
+  path?: string;
   label: string;
+  submenu?: NavItem[];
+}
+
+export interface NewsItem {
+  id: string;
+  title: string;
+  date: string;
+  category: string;
+  featured_image: string;
+  excerpt: string;
+  content: string;
+  author?: string;
+  tags?: string[];
 }

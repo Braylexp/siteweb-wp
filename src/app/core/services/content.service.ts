@@ -56,6 +56,39 @@ export class ContentService {
       vision: SITE_CONTENT.vision
     };
   }
+
+  /**
+   * Obtiene todas las noticias
+   */
+  getNews() {
+    return SITE_CONTENT.news || [];
+  }
+
+  /**
+   * Obtiene las últimas noticias (ordenadas por fecha descendente)
+   * @param limit Número de noticias a retornar
+   */
+  getLatestNews(limit: number = 5) {
+    const news = SITE_CONTENT.news || [];
+    return news.slice(0, limit);
+  }
+
+  /**
+   * Obtiene el featured de noticias (las primeras 3)
+   */
+  getFeaturedNews() {
+    const news = SITE_CONTENT.news || [];
+    return news.slice(0, 3);
+  }
+
+  /**
+   * Obtiene una noticia específica por ID
+   * @param id ID de la noticia
+   */
+  getNewsById(id: string) {
+    const news = SITE_CONTENT.news || [];
+    return news.find(n => n.id === id);
+  }
   
   /**
    * Envía el formulario de contacto

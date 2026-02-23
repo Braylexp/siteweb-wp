@@ -1,0 +1,97 @@
+<!-- Contenido principal -->
+<main class="py-4" *ngIf="news">
+  <div class="max-w-4xl mx-auto">
+    <!-- Meta información -->
+    <div class="mb-8">
+      <div class="flex flex-wrap items-center gap-3 mb-4">
+        <time class="text-sm text-gray-600">{{ news.date }}</time>
+        <span class="text-xs text-gray-500">|</span>
+        <span *ngIf="news.author" class="text-sm text-accent-600">{{ news.author }}</span>
+        <span class="text-xs text-gray-500">|</span>
+        <span class="text-xs text-accent-600">
+          {{ news.category }}
+        </span>
+         </div>
+
+      <!-- Título principal -->
+      <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4 leading-tight">
+        {{ news.title }}
+      </h1>
+    </div>
+
+    <!-- Imagen destacada -->
+    <div class="mb-8 rounded-lg overflow-hidden shadow-lg">
+      <img
+        [src]="news.featured_image"
+        [alt]="news.title"
+        class="w-full h-[500px] object-cover"
+        loading="lazy"
+        decoding="async"
+      />
+    </div>
+
+    <!-- Contenido artículo -->
+    <article class="prose prose-lg max-w-none mb-12">
+      <div [innerHTML]="news.content | formatContent"></div>
+    </article>
+
+    <!-- Separador -->
+    <div class="border-t-2 border-gray-200 my-12"></div>
+
+    <!-- Información del autor (si existe) -->
+    <div *ngIf="news.author" class="bg-gray-50 p-6 rounded-lg mb-12">
+      <h3 class="text-lg font-semibold text-gray-900 mb-2">Sobre el autor</h3>
+      <p class="text-gray-700">
+        {{ news.author }} es el autor de este artículo. Conoce más sobre su trabajo y compromisos.
+      </p>
+    </div>
+
+    <!-- Noticias relacionadas -->
+    <section class="mb-12" *ngIf="relatedNews.length > 0">
+      <h2 class="text-3xl font-bold text-gray-900 mb-8">Noticias relacionadas</h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <article
+          *ngFor="let relatedItem of relatedNews"
+          class="bg-white rounded-lg shadow hover:shadow-lg transition-shadow overflow-hidden group cursor-pointer"
+          [routerLink]="['/noticias', relatedItem.id]"
+          role="link"
+          tabindex="0"
+        >
+          <!-- Imagen -->
+          <div class="relative overflow-hidden h-[200px]">
+            <img
+              [src]="relatedItem.featured_image"
+              [alt]="relatedItem.title"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+
+          <!-- Contenido -->
+          <div class="p-4">
+            <span
+              class="inline-block bg-accent-100 text-accent-700 text-xs font-bold px-2 py-1 rounded mb-2"
+            >
+              {{ relatedItem.category.split(',')[0].trim() }}
+            </span>
+            <h3
+              class="font-semibold text-gray-900 mb-2 line-clamp-2 group-hover:text-accent-600 transition-colors"
+            >
+              {{ relatedItem.title }}
+            </h3>
+            <p class="text-sm text-gray-600">{{ relatedItem.date }}</p>
+          </div>
+        </article>
+      </div>
+    </section>
+  </div>
+</main>
+
+<!-- Página no encontrada -->
+<div class="section-container py-24 text-center" *ngIf="!news && newsId">
+  <h1 class="text-3xl font-bold text-gray-900 mb-4">Noticia no encontrada</h1>
+  <p class="text-gray-600 mb-8">La noticia que buscas no existe o ha sido removida.</p>
+  <app-cta-button text="Volver al Inicio" routerLink="/" variant="primary"> </app-cta-button>
+</div>

@@ -1,0 +1,23 @@
+/* Estilos para la página de denuncias */
+
+.prose {
+  line-height: 1.75;
+}
+
+.prose p {
+  margin-bottom: 1.5rem;
+}
+
+.prose h2 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: #1f2937;
+}
+
+.prose ul {
+  margin-bottom: 1.5rem;
+}
+
+.prose li {
+  margin-bottom: 0.5rem;
+}

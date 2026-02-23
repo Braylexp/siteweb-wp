@@ -1,0 +1,67 @@
+<main class="min-h-screen bg-gray-50">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="mb-12">
+      <h1 class="text-4xl font-bold text-gray-900 mb-2">Denuncias</h1>
+      <p class="text-gray-600 text-lg">Información detallada de nuestras denuncias y comunicados sobre violaciones de derechos humanos</p>
+    </div>
+
+    <!-- Denuncias list -->
+    <div class="space-y-12">
+      <article *ngFor="let news of denunciasNews" class="bg-white rounded-lg shadow-lg overflow-hidden">
+        <!-- Header with metadata -->
+        <div class="bg-gradient-to-r from-primary-500 to-accent-600 p-6 text-white">
+          <div class="flex items-center gap-3 mb-3 flex-wrap">
+            <span class="text-sm font-bold uppercase">
+              {{ news.date }}
+            </span>
+            <span class="text-sm">|</span>
+            <span class="text-sm font-semibold uppercase">
+              {{ news.category }}
+            </span>
+          </div>
+          <h2 class="text-3xl font-bold leading-tight">
+            {{ news.title }}
+          </h2>
+        </div>
+
+        <!-- Featured image -->
+        <img
+          *ngIf="news.featured_image"
+          [src]="news.featured_image"
+          [alt]="news.title"
+          class="w-full h-96 object-cover"
+          loading="lazy"
+          decoding="async"
+        />
+
+        <!-- Content -->
+        <div class="p-8">
+          <div class="prose prose-lg max-w-none text-gray-700 leading-relaxed">
+            <p *ngFor="let paragraph of news.paragraphs" class="mb-4 whitespace-pre-wrap">
+              {{ paragraph }}
+            </p>
+          </div>
+
+          <!-- Author and tags -->
+          <div *ngIf="news.author || news.tags" class="mt-8 pt-8 border-t border-gray-200">
+            <div *ngIf="news.author" class="mb-4">
+              <p class="text-sm text-gray-600">
+                <span class="font-semibold">Por:</span> {{ news.author }}
+              </p>
+            </div>
+            <div *ngIf="news.tags && news.tags.length > 0" class="flex flex-wrap gap-2">
+              <span *ngFor="let tag of news.tags" class="inline-block bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">
+                #{{ tag }}
+              </span>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <!-- Empty state -->
+    <div *ngIf="denunciasNews.length === 0" class="bg-white rounded-lg shadow p-8 text-center">
+      <p class="text-gray-600 text-lg">No hay denuncias disponibles en este momento.</p>
+    </div>
+  </div>
+</main>

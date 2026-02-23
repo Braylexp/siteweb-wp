@@ -2,25 +2,29 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { ContentService } from '../../core/services/content.service';
-import { ServiceItem } from '../../core/models/content.model';
+import { ServiceItem, NewsItem } from '../../core/models/content.model';
 import { CtaButton } from '../../shared/components/cta-button/cta-button';
 
 @Component({
   selector: 'app-home',
  standalone: true,
-  imports: [CommonModule, RouterModule, CtaButton],
+  imports: [CommonModule, RouterModule],
   templateUrl: './home.html',
   styleUrl: './home.css',
 })
 export class Home {
   generalInfo: any;
   services: ServiceItem[] = [];
+  featuredNews: NewsItem[] = [];
+  recentNews: NewsItem[] = [];
   
   constructor(private contentService: ContentService) {}
   
   ngOnInit(): void {
     this.generalInfo = this.contentService.getGeneralInfo();
     this.services = this.contentService.getServices();
+    this.featuredNews = this.contentService.getFeaturedNews();
+    this.recentNews = this.contentService.getLatestNews(5);
   }
   
   /**

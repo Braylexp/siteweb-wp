@@ -1,6 +1,6 @@
 /* Animaciones suaves para las tarjetas */
 .hero-overlay {
-  background: linear-gradient(to left, rgba(15, 23, 42, 0.3) 0%, rgba(15, 23, 42, 0.6) 10%, rgba(15, 23, 42, 0.95) 100%);
+  background: linear-gradient(to left, rgba(20, 73, 74, 0.3) 0%, rgba(42, 42, 42, 0.6) 10%, rgba(31, 31, 32, 0.8) 100%);
 }
 .card {
   transition: all 0.3s ease;
@@ -8,6 +8,31 @@
 
 .card:hover {
   transform: translateY(-5px);
+}
+
+/* Estilos para las tarjetas de noticias */
+.news-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  text-decoration: none;
+}
+
+.news-card:hover {
+  text-decoration: none;
+}
+
+.news-card:focus-visible {
+  outline: 2px solid #f59e0b;
+  outline-offset: 2px;
+}
+
+.news-card:hover span {
+  background-color: #fbbf24 !important;
+}
+
+.news-card:hover h3 {
+  color: #fbbf24;
 }
 
 /* Efecto parallax suave en el hero */
@@ -27,8 +52,8 @@
   background:
     radial-gradient(
       ellipse at top left,
-      #041545 0%,
-      #172554 55%
+      #353c4f 0%,
+      #2b2f3d 55%
     );
 }
 

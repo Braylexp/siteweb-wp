@@ -19,3 +19,39 @@ a:focus,
 button:focus {
   outline-offset: 2px;
 }
+
+/* Estilos para el dropdown - Mantener abierto al pasar el mouse */
+.relative {
+  position: relative;
+}
+
+.relative:hover > div {
+  display: block;
+}
+
+/* Transición suave del dropdown */
+div[class*="animate-fade-in"] {
+  animation: fade-in 0.3s ease-out;
+}
+
+/* Input de búsqueda */
+input[type="text"]::placeholder {
+  color: #9ca3af;
+}
+
+input[type="text"]:focus {
+  outline: none;
+}
+
+/* Animación suave para la barra de búsqueda */
+.animate-fade-in {
+  animation: fade-in 0.2s ease-out;
+}
+
+/* Responsive para la barra superior */
+@media (max-width: 640px) {
+  /* Barra superior más compacta en móvil */
+  header {
+    position: relative;
+  }
+}

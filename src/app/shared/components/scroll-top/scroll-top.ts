@@ -24,16 +24,16 @@ import { CommonModule } from '@angular/common';
       width: 50px;
       height: 50px;
       border-radius: 50%;
-      background-color: #05294fff;
+      background-color: rgb(129, 147, 147);
       color: white;
       border: none;
       font-size: 24px;
       cursor: pointer;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      box-shadow: 0 4px 10px rgba(234, 216, 166, 0.3);
       transition: opacity 0.3s ease-in-out;
       z-index: 1000;
     }
-    .scroll-btn:hover { background-color: #0056b3; }
+    .scroll-btn:hover { background-color: #333333; }
   `]
 })
 export class ScrollTop {
