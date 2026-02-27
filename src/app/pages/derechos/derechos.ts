@@ -4,13 +4,13 @@ import { ContentService } from '../../core/services/content.service';
 import { CtaButton } from '../../shared/components/cta-button/cta-button';
 
 @Component({
-  selector: 'app-about',
+  selector: 'app-derechos',
   standalone: true,
   imports: [CommonModule, CtaButton],
-  templateUrl: './about.html',
-  styleUrl: './about.css',
+  templateUrl: './derechos.html',
+  styleUrl: './derechos.css',
 })
-export class About {
+export class Derechos {
   generalInfo: any;
   mission: string = '';
   vision: string = '';

@@ -125,21 +125,21 @@
               *ngIf="!hasSubmenu(item)"
               [routerLink]="item.path"
               routerLinkActive="border-b-4 border-accent-700 text-primary-500"
-              class="text-lg font-medium text-accent-700 hover:text-gray-500 transition-colors duration-200 pb-2 px-3 rounded-md"
+              class="text-sm font-medium text-accent-700 hover:text-gray-500 transition-colors duration-200 pb-2 px-3 rounded-md"
             >
               {{ item.label }}
             </a>
 
             <!-- Items con submenú - Contenedor que mantiene el dropdown abierto -->
             <div 
-              *ngIf="hasSubmenu(item)" 
+              *ngIf="hasSubmenu(item)"
               class="relative"
               (mouseenter)="openDropdownMenu(item.label)"
               (mouseleave)="closeDropdown()"
             >
               <button
                 [attr.aria-expanded]="openDropdown === item.label"
-                class="text-lg font-medium text-accent-700 hover:text-primary-500 transition-colors duration-200 pb-2 px-3 rounded-md flex items-center gap-2"
+                class="text-sm font-medium text-accent-700 hover:text-primary-500 transition-colors duration-200 pb-2 px-3 rounded-md flex items-center gap-2"
               >
                 {{ item.label }}
                 <svg class="w-4 h-4 transition-transform" [class.rotate-180]="openDropdown === item.label" fill="none" stroke="currentColor" viewBox="0 0 24 24">

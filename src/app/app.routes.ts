@@ -26,11 +26,6 @@ export const routes: Routes = [
     title: 'SOMOS MARCHA'
   },
   {
-    path: 'derechos',
-    loadComponent: () => import('./pages/about/about').then(m => m.About),
-    title: 'DERECHOS HUMANOS'
-  },
-  {
     path: 'denuncias',
     loadComponent: () => import('./pages/denuncias/denuncias').then(m => m.Denuncias),
     title: 'Denuncias'
@@ -47,8 +42,8 @@ export const routes: Routes = [
   },
   {
     path: 'comunicacion',
-    loadComponent: () => import('./pages/services/services').then(m => m.Services),
-    title: 'COMUNICACIÓN'
+    loadComponent: () => import('./pages/comunicacion/comunicacion').then(m => m.Comunicacion),
+    title: 'COMUNICACION'
   },
   {
     path: 'declaraciones',
@@ -62,7 +57,7 @@ export const routes: Routes = [
   },
   {
     path: 'internacional',
-    loadComponent: () => import('./pages/contact/contact').then(m => m.Contact),
+    loadComponent: () => import('./pages/internacional/internacional').then(m => m.Internacional),
     title: 'INTERNACIONAL'
   },
   {

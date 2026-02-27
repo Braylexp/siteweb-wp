@@ -6,13 +6,13 @@ import { CtaButton } from '../../shared/components/cta-button/cta-button';
 import { ServiceItem } from '../../core/models/content.model';
 
 @Component({
-  selector: 'app-services',
+  selector: 'app-comunicacion',
   standalone: true,
   imports: [CommonModule, CtaButton],
-  templateUrl: './services.html',
-  styleUrl: './services.css',
+  templateUrl: './comunicacion.html',
+  styleUrl: './comunicacion.css',
 })
-export class Services implements OnInit {
+export class Comunicacion implements OnInit {
   services: ServiceItem[] = [];
   activities: string[] = [];
   

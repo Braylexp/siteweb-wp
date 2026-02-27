@@ -27,6 +27,7 @@ export class Header {
     { path: '/somos', label: 'SOMOS MARCHA' },
     {
       label: 'DERECHOS HUMANOS',
+      path: '/derechos',
       submenu: [
         { path: '/denuncias', label: 'Denuncias' },
         { path: '/informes', label: 'Informes' },
@@ -35,6 +36,7 @@ export class Header {
     },
     {
       label: 'COMUNICACIÓN',
+      path: '/comunicacion',
       submenu: [
         { path: '/declaraciones', label: 'Declaraciones' },
         { path: '/opinion-comunicacion', label: 'Opinión y Análisis' }
